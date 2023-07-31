@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import Carousel, { CarouselItem } from "@/components/Carousel";
+import ContinueWatching from "@/components/anime/ContinueWatching";
 export default function Home() {
   const [carouselItems, setCarouselItems] = useState([]);
 
@@ -15,8 +16,9 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="flex w-full h-full">
+    <main className="flex w-full h-full flex-col">
       <Carousel items={carouselItems}></Carousel>
+      <ContinueWatching />
     </main>
   );
 }
