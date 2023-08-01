@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import Carousel, { CarouselItem } from "@/components/Carousel";
+import Carousel, { CarouselItem } from "@/components/carousel/Carousel";
 import ContinueWatching from "@/components/anime/ContinueWatching";
 export default function Home() {
   const [carouselItems, setCarouselItems] = useState([]);

@@ -10,6 +10,7 @@ import { carouselIndexAtom } from "@/store/CarouselStore";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import InfoIcon from "@mui/icons-material/Info";
 import PlaylistAddIcon from "@mui/icons-material/PlaylistAdd";
+import CarouselBgImage from "./CarouselBgImage";
 
 type CarouselProps = {
   // children: React.ReactNode;
@@ -41,12 +42,13 @@ const Carousel = ({ items }: CarouselProps) => {
     return () => clearInterval(interval);
   });
 
-  const saveToList = (item) => {
-    alert(`Saving item ${items.indexOf(item)}`);
+  const saveToList = (item: CarouselItem) => {
+    alert(`Saving item`);
   };
 
   return (
     <div className="flex flex-col">
+      <CarouselBgImage />
       <div className="carousel__container ">
         {items &&
           items.map((item, index) => (
@@ -85,7 +87,7 @@ const Carousel = ({ items }: CarouselProps) => {
           ))}
       </div>
       {items.length && (
-        <div className="flex gap-[2vw]">
+        <div className="flex gap-[2vw] relative z-10">
           <Link
             href={`/anime/player/${items[currentIndex].id}`}
             className="orange_gradient__fill rounded-full h-[4vw] w-[4vw] flex items-center justify-center text-slate-900"

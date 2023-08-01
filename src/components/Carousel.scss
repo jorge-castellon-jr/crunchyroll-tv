@@ -1,9 +1,0 @@
-.carousel {
-  &__container {
-    @apply flex flex-nowrap overflow-hidden max-w-[45vw] h-[30vw] w-full relative;
-  }
-  &__item {
-    @apply absolute inset-0 min-w-full w-full flex flex-col justify-end transition-opacity;
-    transition-duration: 1.5s;
-  }
-}

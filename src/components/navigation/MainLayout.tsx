@@ -26,7 +26,7 @@ const MainLayout = () => {
     },
   ];
   return (
-    <div className="w-full flex justify-between">
+    <div className="w-full flex justify-between relative z-10">
       {/* Navigation */}
       <div className="flex items-center gap-[2vw]">
         <Image
