@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import Thumbnail from "./Thumbnail";
 import { CarouselItem } from "../Carousel";
+import { AnimeEpisode } from "@/lib/database";
 
 const ContinueWatching = () => {
   const [shows, setShows] = useState([]);
@@ -16,8 +17,8 @@ const ContinueWatching = () => {
   }, []);
 
   return (
-    <div className="flex gap-[2vw] w-[100vw]">
-      {shows.map((show: CarouselItem) => (
+    <div className="flex gap-[2vw] overflow-x-scroll w-[100vw] mx-[-4vw] px-[4vw]">
+      {shows.map((show: AnimeEpisode) => (
         <Thumbnail key={show.id} show={show} />
       ))}
     </div>

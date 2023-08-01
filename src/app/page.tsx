@@ -18,6 +18,7 @@ export default function Home() {
   return (
     <main className="flex w-full h-full flex-col">
       <Carousel items={carouselItems}></Carousel>
+      <div>Continue Watching</div>
       <ContinueWatching />
     </main>
   );
