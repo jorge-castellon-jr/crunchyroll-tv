@@ -1,7 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Thumbnail from "./Thumbnail";
-import { CarouselItem } from "../Carousel";
 import { AnimeEpisode } from "@/lib/database";
 
 const ContinueWatching = () => {
