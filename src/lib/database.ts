@@ -1,4 +1,4 @@
-import { CarouselItem } from "@/components/Carousel";
+import { CarouselItem } from "@/components/carousel/Carousel";
 import { faker } from "@faker-js/faker";
 
 export const getFakerShows = (count = 1) => {

@@ -1,4 +1,4 @@
-import { CarouselItem } from "@/components/Carousel";
+import { CarouselItem } from "@/components/carousel/Carousel";
 import { getFakerShows } from "@/lib/database";
 
 export const GET = async (request: Request) => {
