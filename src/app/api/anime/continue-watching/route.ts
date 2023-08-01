@@ -1,4 +1,3 @@
-import { CarouselItem } from "@/components/Carousel";
 import { AnimeEpisode, getFakerContinueWatching } from "@/lib/database";
 
 export const GET = async (request: Request) => {
