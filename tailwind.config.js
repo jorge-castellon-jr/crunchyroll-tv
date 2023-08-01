@@ -16,6 +16,14 @@ module.exports = {
       },
     },
     extend: {
+      fontSize: {
+        xs: "0.5rem",
+        sm: "1vw",
+        base: "1.2vw",
+      },
+      boxShadow: {
+        show: "0 .5vw .2vw 0px rgba(29, 31, 36, .5)",
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

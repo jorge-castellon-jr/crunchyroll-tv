@@ -40,7 +40,7 @@ export const getFakerContinueWatching = (count = 1) => {
       description: faker.lorem.sentence(),
       image: faker.image.urlLoremFlickr({
         category: "anime",
-        width: 1000,
+        width: 800,
         height: 500,
       }),
       season: Math.ceil(Math.random() * 4),

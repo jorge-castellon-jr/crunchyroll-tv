@@ -2,7 +2,10 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import "./Carousel.module.scss";
+import "./Carousel.scss";
+
+import { useAtom } from "jotai";
+import { carouselIndexAtom } from "@/store/CarouselStore";
 
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import InfoIcon from "@mui/icons-material/Info";
@@ -23,7 +26,7 @@ export type CarouselItem = {
 };
 
 const Carousel = ({ items }: CarouselProps) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useAtom(carouselIndexAtom);
   const carouselInfiniteScroll = () => {
     if (currentIndex >= items.length - 1) {
       return setCurrentIndex(0);
@@ -34,7 +37,7 @@ const Carousel = ({ items }: CarouselProps) => {
   useEffect(() => {
     const interval = setInterval(() => {
       carouselInfiniteScroll();
-    }, 5000);
+    }, 10000);
     return () => clearInterval(interval);
   });
 
@@ -44,13 +47,13 @@ const Carousel = ({ items }: CarouselProps) => {
 
   return (
     <div className="flex flex-col">
-      <div className="carousel__container flex flex-nowrap overflow-hidden  max-w-[45vw] h-[30vw] w-full relative">
+      <div className="carousel__container ">
         {items &&
           items.map((item, index) => (
             <div
               className={
-                "absolute inset-0 min-w-full w-full flex flex-col justify-end transition-opacity duration-300 " +
-                (index === currentIndex ? "opacity-100" : " opacity-0")
+                "carousel__item " +
+                (index === currentIndex ? "opacity-100" : "opacity-0")
               }
               key={`carousel-item-${index}`}
             >
