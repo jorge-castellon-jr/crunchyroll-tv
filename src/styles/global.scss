@@ -40,8 +40,9 @@
     --radius: 0.5rem;
   }
 
+  $dark_background: #16181c;
   .dark {
-    --background: 222.2 84% 4.9%;
+    --background: #16181c;
     --foreground: 210 40% 98%;
 
     --muted: 217.2 32.6% 17.5%;
@@ -93,7 +94,7 @@
   .orange_gradient {
     @apply bg-gradient-to-r from-amber-500 via-orange-600 to-yellow-500 bg-clip-text text-transparent;
     &__fill {
-    @apply bg-gradient-to-tr from-amber-500 to-orange-600  ;
+      @apply bg-gradient-to-tr from-amber-500 to-orange-600;
     }
   }
 }
