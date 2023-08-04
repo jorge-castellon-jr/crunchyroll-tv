@@ -2,18 +2,10 @@
 import React, { useState, useEffect } from "react";
 import Thumbnail from "./Thumbnail";
 import { AnimeEpisode } from "@/lib/database";
+import { useContinueWatching } from "./useContinueWatching";
 
 const ContinueWatching = () => {
-  const [shows, setShows] = useState([]);
-
-  useEffect(() => {
-    const fetchShows = async () => {
-      const response = await fetch("/api/anime/continue-watching");
-      const data = await response.json();
-      setShows(data);
-    };
-    fetchShows();
-  }, []);
+  const { shows } = useContinueWatching();
 
   return (
     <div className="flex gap-[2vw] overflow-x-scroll w-[100vw] mx-[-4vw] px-[4vw]">

@@ -1,9 +1,9 @@
-import { CarouselItem } from "@/components/carousel/Carousel";
+import { CarouselSlide } from "@/components/carousel/Carousel";
 import { faker } from "@faker-js/faker";
 
 export const getFakerShows = (count = 1) => {
   if (count < 8) count = 8;
-  return [...Array(count)].map((_, index): CarouselItem => {
+  return [...Array(count)].map((_, index): CarouselSlide => {
     const title = faker.music.songName();
     const randomTagCount = Math.ceil(Math.random() * 3) + 1;
     return {
