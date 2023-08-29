@@ -1,0 +1,20 @@
+name: Vercel Main Deployment
+run-name: ${{ github.actor }} Deploying to Vercel from Main 🚀
+on:
+  push:
+    branches: [main]
+jobs:
+  FailJobIssueDemo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Step is going to pass
+        run: echo Passing step
+      
+      - name: Step is going to fail
+        run: exit 1
+
+      - name: Step is going to pass
+        run: echo Passing step
+         
+      - name: Step To run on failure
+        if: ${{ failure() }}
