@@ -18,3 +18,4 @@ jobs:
          
       - name: Step To run on failure
         if: ${{ failure() }}
+        run: echo Running on failure
